@@ -1,2 +1,42 @@
+/*General*/
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*QUIENES SOMOS*/
+/*Header*/
+
+
+/*main*/
+
+#Banner{
+    width:100%;
+    height:500px;
+    padding: 10px 40px 10px 40px;
+
+}
+
+.container{
+    padding:10px 40px 10px 40px;
+}
+
+.titulo{
+    
+}
+
+.texto{
+    margin-top: 10px 0px 10px 0px;
+}
 
