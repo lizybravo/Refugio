@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horarios</title>
+    <style>
+      *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            min-height: 100%;
+        }
+        html{
+            height: 100%;
+        }
+        .grid-container > *{
+           border-radius: 15px;
+           padding: 10px;
+        }
+        .header{
+            grid-area: header;
+            background-color: rgb(215, 247, 219);
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap: 250px;
+            margin: 15px;
+            justify-content:flex-start; 
+        }   
+        .navbar{
+            grid-area: navbar;
+            background-color: rgb(255, 167, 215);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: auto;
+            height: 42px;
+            border-radius: 20px;
+            margin: 0px 20px 0px 20px;
+        }
+        a{
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(2, 167, 2);
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: rgb(255, 232, 251);
+            display: flex; 
+            flex-direction: column; 
+            text-align: justify; 
+            margin: 0px 0px 0px 20px;
+            font-size: smaller;
+        }
+        .main{
+            grid-area: main;
+            background-color: rgba(207, 207, 207, 0);
+            width: auto;
+            height: auto;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+        .tabla{
+            grid-area: tabla;
+        }
+        .footer{
+            grid-area: footer;
+            display: flex;
+            flex-direction: row;
+            gap: 250px;
+            margin: 15px;
+            justify-content:center; 
+        }
+     /*Télefono*/
+     .grid-container{
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+            "header"
+            "navbar"
+            "main"
+            "tabla"
+            "footer";
+        }
+
+        /*Para Tablet*/
+        @media(min-width: 768px){
+            .grid-container{
+                grid-template-columns: 200px auto;
+                grid-template-rows: 150px 50px auto 100px;
+                
+                grid-template-areas: 
+                "header header"
+                "navbar navbar"
+                "sidebar main"
+                "tabla tabla"
+                "footer footer";
+            }
+        }
+        
+        /*Para escritorio*/
+        @media(min-width: 900px){
+            .grid-container{
+                grid-template-columns: 200px auto;
+                grid-template-rows: 150px 50px auto 100px;
+
+                grid-template-areas: 
+                "header header header"
+                "navbar navbar navbar"
+                "sidebar main main"
+                "sidebar tabla tabla"
+                "footer footer footer";
+            }
+        }
+
+        /*animaciones*/
+        @keyframes animacion {
+            from{
+                opacity: 1;                
+            }
+            to{
+                opacity: 0;
+            }            
+        }
+        .animacion{
+            animation-name: animacion;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+    </style>
+  </head>
+  <body class="grid-container">
+    <header style="background-image: url(./src/img/fondo_RAV.png);" 
+    class="header">
+            <div class="container">
+    
+                <div class="Logo">
+                    <!---Logo inicial-->
+                <img src="./src/img/Logo1.png" alt="Logo1" width="100px" height="100px">
+                </div>
+        
+                <div class="NumeroRecuadro"
+                style="display: flex;
+                flex-direction: row;
+                gap: 30px";>
+                    <div>
+                        <!---Logos de telefono-->
+                    <img style="margin: 20px 0px 0px 0px;"
+                    src="./src/img/telefonoGrande.png" alt="Logo" width="80px" height="75px">
+                    </div>
+        
+                    <div class="Numero">
+                    <!---Número de emegencia-->
+                    <h5>Número de emergencia</h5>
+                    <h1>55 19 28 37 64</h1>
+                    <img src="./src/img/Whatsapp.webp" alt="whatsApp" width="32px" height="32px">
+                    <img src="./src/img/TelefonoChico.png" alt="Llamada" width="30px" height="30px">
+                    <h3>Horario: <strong>24 HRS</strong> Lunes a Domingo</h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <nav class="navbar">
+      <a href="./index.html"><strong>Inicio</strong></a>
+      <a href=""><strong>Servicios de acompañamiento y asesoramiento</strong></a>
+      <a href=""><strong>Cursos y talleres</strong></a>
+      <a href=""><strong>Emergencia</strong></a>
+      <a href=""><strong>¿Quiénes somos?</strong></a>
+    </nav>
+
+
+
+
+    <aside class="sidebar">
+      <h1>Horario de Oficina</h1>
+      <h2>Lunes a Viernes</h2>
+      <p>7am-7pm</p>
+      <h2>Sábado</h2>
+      <p>7am-4pm</p>
+      <h2>Domingo</h2>
+      <p>7am-2pm</p>
+      <h3>
+        Parque Delta;Av. Cuauhtémoc 462, Piedad Narvarte, Benito Juárez, 03000
+        Ciudad de México, CDMX
+      </h3>
+    </aside>
+    <article class="main">
+      <h1>Horario de línea telefónica</h1>
+      <h2>Lunes a Domingo</h2>
+      <p>24hr/7dias</p>
+      <h3>TEL: 865 436 75 73 / EXT. (0808) (0909)</h3>
+      <article class="main">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42578.34751172095!2d-99.15587242462475!3d19.39382784499049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff1a2816cd87%3A0x9d03a3d2ccf92f3b!2sParque%20Delta!5e0!3m2!1ses-419!2smx!4v1696966096987!5m2!1ses-419!2smx"
+          width="500"
+          height="500"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </article>
+    </article>
+    <footer></footer>
+  </body>
+</html>
